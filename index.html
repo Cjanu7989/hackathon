@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection and Teacher Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Course Selection and Teacher Assignment</h1>
+        
+        <!-- Student Information Form -->
+        <form id="student-form">
+            <h2>Student Information</h2>
+            
+            <label for="reg-number">Register Number:</label>
+            <input type="text" id="reg-number" name="reg-number" required>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="CSE">Computer Science</option>
+                <option value="ECE">Electronics and Communication</option>
+                <option value="EEE">Electrical Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <!-- Add more branches as needed -->
+            </select>
+            
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+        </form>
+        
+        <!-- Teacher Selection and Feedback -->
+        <h2>Select Course and Teacher</h2>
+        <form id="teacher-selection-form">
+            
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="course1">Data Structures</option>
+                <option value="course2">Algorithms</option>
+                <option value="course3">Operating Systems</option>
+                <option value="course4">Database Systems</option>
+                <!-- Add more courses as needed -->
+            </select>
+
+            <label for="teacher">Teacher:</label>
+            <select id="teacher" name="teacher" required>
+                <option value="">Select Teacher</option>
+                <!-- Teacher options will be populated dynamically from the backend -->
+            </select>
+
+            <!-- Teacher profile display -->
+            <div id="teacher-profile">
+                <h3>Teacher Information</h3>
+                <p id="teacher-info">Select a teacher to view their profile.</p>
+            </div>
+
+            <!-- Feedback Section -->
+            <h2>Provide Feedback</h2>
+            <label for="feedback">Your Feedback for the Teacher:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <!-- Confirmation Message -->
+        <p id="confirmation-message" style="display:none;"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
